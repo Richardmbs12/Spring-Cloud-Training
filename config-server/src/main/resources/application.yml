@@ -1,0 +1,25 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-configuration-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Richardmbs12/Spring-Cloud-Training
+          username: Richardmbs12
+          password: 0836299533Mbs3
+          skip-ssl-validation: true
+          search-paths:
+            - '/cloud-configuration-properties/demo/microservice*'
+          repos:
+            local:
+              pattern: '*/local'
+              uri: https://github.com/Richardmbs12/Spring-Cloud-Training-local
+              search-paths:
+                - '/cloud-configuration-properties/demo/microservice*'
+  security:
+    user:
+      name: demo
+      password: password
